@@ -1,38 +1,28 @@
-.App {
-  text-align: center;
+@import url(https://fonts.googleapis.com/css2?family=Nunito&display=swap%27);
+
+html {
+    color: #6A6A6A;
+    font-family: Nunito;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#container{
+    margin-left: 336px;
+    padding: 85px 112px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.list-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 35px;
+    color: #555555;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.cards-list {
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cards-list > div{
+    margin: 17px 34px 17px 0;
 }

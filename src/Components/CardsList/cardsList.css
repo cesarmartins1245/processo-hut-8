@@ -1,0 +1,33 @@
+.Card {
+    width: 236px;
+    background: #FCFCFC;
+    border-radius: 20px;
+}
+
+.Card img {
+    object-fit: cover;
+    width: 236px;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.Card .card-content{
+    padding: 0px 19px 13px;
+}
+.Card .card-name {
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 14px;
+    color: #737373;
+}
+
+.Card .card-title {
+    font-size: 12px;
+    line-height: 16px;
+    color: #4B4B4B;
+}
+
+.Card .card-extra {
+    font-size: 8px;
+    line-height: 11px;
+    color: #8E8E8E;
+}

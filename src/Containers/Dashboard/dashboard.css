@@ -1,0 +1,11 @@
+.Dashboard {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 26px;
+    line-height: 35px;
+    color: #555555;
+}
+
+.Dashboard #icon{
+    background: #7D7D7D;
+}

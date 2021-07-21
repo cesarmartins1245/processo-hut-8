@@ -1,0 +1,54 @@
+.Sidebar {
+    position: fixed;
+    width: 336px;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
+    text-align: center;
+    background: #FAFAFA;
+    padding: 85px 0px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+}
+
+.Sidebar #avatar {
+    width: 85px;
+    height: 85px;
+    left: 123px;
+    top: 85px;
+    border-radius: 50%;
+}
+
+.Sidebar #studentName {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    color: #727272;
+}
+
+.Sidebar #studentCourse {
+    font-size: 14px;
+    margin-top: 6px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    color: #727272;
+}
+
+.Sidebar #sidebar-links {
+    display: flex;
+    flex-direction: column;
+    margin: 59px 67px;
+}
+
+.Sidebar .link-button {
+    font-weight: bold;
+    text-align: left;
+    font-size: 18px;
+    line-height: 25px;
+    color: #6A6A6A;
+    text-decoration: none;
+    margin-bottom: 35px;
+}
