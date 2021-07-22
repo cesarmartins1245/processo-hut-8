@@ -3,7 +3,7 @@ import './sidebar.css'
 import {NavLink} from 'react-router-dom'
 
 function Sidebar (props){
-    console.log(props.user);
+    //console.log(props.user);
     return (
         <div className="Sidebar">
             <img id="avatar" src={props.user.avatar} alt="avatar"></img>
