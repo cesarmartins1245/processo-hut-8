@@ -52,7 +52,6 @@ const App = () => {
       main: () => <h1>Courses</h1>,
     },
   ]
-console.log(user.overview)
   return (
     <div className="App">
       <Router>

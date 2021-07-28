@@ -43,8 +43,8 @@
     margin: 59px 67px;
 }
 
-.Sidebar .link-button {
-    font-weight: bold;
+.Sidebar .main-nav {
+    font-weight: 400;
     text-align: left;
     font-size: 18px;
     line-height: 25px;
@@ -52,3 +52,10 @@
     text-decoration: none;
     margin-bottom: 35px;
 }
+
+.Sidebar .main-nav-active{
+    font-weight: 700;
+    font-weight: bold;
+}
+
+

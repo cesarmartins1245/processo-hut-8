@@ -3,10 +3,12 @@ import './rectangle.css'
 
 
 function Rectangle(props){
-    let aux = props.enrolledCourses
+    /*let aux = props.enrolledCourses
         if (props.enrolledCourses<10){
             aux=`0${props.enrolledCourses}`
         }
+    */
+    let aux = String(props.enrolledCourses).padStart(2, '0')
     return(
         <div className="Rectangle">
             <div>
