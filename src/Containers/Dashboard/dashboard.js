@@ -7,7 +7,6 @@ import { getUser } from '../../services/requests'
 import React, { useEffect, useState } from 'react'
 
 const Dashboard = () => {
-    let loading = true
     const [user, setUser] = useState({})
     useEffect(() => {
         const getUserData = async () => {
