@@ -1,6 +1,7 @@
 import Sidebar from './Components/Sidebar/sidebar'
 import Dashboard from './Containers/Dashboard/dashboard'
 import MyCourses from './Containers/MyCourses/myCourses'
+import Aep from './Containers/Aep/aep'
 import './App.css'
 import React, { useEffect, useState } from 'react'
 import { getUser } from './services/requests'
@@ -60,6 +61,7 @@ const App = () => {
         <div id="container">
           <Route path='/' exact component={Dashboard}></Route>
           <Route path='/courses' exact component={MyCourses}></Route>
+          <Route path='/courses/:id' component={Aep}></Route>
         </div>
       </div>
         <Switch>

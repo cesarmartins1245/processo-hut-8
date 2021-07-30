@@ -37,22 +37,7 @@ const Dashboard = () => {
                 key={index}
             />
         ))
-    /*
-        const activities = [
-            {
-                image: "https://i.imgur.com/aadwyfC.jpg",
-                name: "Algoritmos e Programação",
-                title: "Enviar arquivos Peter Smokes",
-                extra: "10/10/2020"
-            },
-            {
-                image: "https://i.imgur.com/RgQrlAS.jpg",
-                name: "Projeto de Banco de Dados",
-                title: "Enviar o esquema MySQL",
-                extra: "10/10/2020"
-            }
-        ]
-    */
+
         activities = user.nextActivities?.map((card) => (
             {
             image : card.image,
@@ -62,7 +47,7 @@ const Dashboard = () => {
             }
         ))
     }
-    console.log("teste", activities)
+    //console.log("teste", activities)
     return(
         <div className="Dashboard">
             <div className="list-title">Resume</div>

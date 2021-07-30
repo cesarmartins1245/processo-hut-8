@@ -18,6 +18,14 @@ html {
     color: #555555;
 }
 
+.sub-title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    color: #737373;
+}
+
 .cards-list {
     display: flex;
     flex-wrap: wrap;

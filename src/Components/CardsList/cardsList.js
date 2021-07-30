@@ -1,16 +1,22 @@
 import React from 'react'
 import './cardsList.css'
+import { NavLink } from 'react-router-dom'
 
 function Card(props){
-    const { image, name, title, extra } = props.card;
+    const { image, name, title, extra, link} = props.card;
+    console.log("teste cardslist",props)
     return(
-        <div className="Card">
-            <img src={image} alt="card image"></img>
-            <div className="card-content">
-                <div className="card-name">{name}</div>
-                <div className="card-title">{title}</div>
-                <div className="card-extra">{extra}</div>
-            </div>
+        <div>
+            <NavLink exact to={link||''} className="Card">
+                <div>
+                    <img src={image} alt="card image"></img>
+                    <div className="card-content">
+                        <div className="card-name">{name}</div>
+                        <div className="card-title">{title}</div>
+                        <div className="card-extra">{extra}</div>
+                    </div>
+                </div>
+            </NavLink>
         </div>
     )
 }

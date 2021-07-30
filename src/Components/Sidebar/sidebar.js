@@ -10,7 +10,7 @@ function Sidebar (props){
             <div id="studentCourse">{props.user.course} </div>
             <div id="sidebar-links">
                 <NavLink exact to='/' className="main-nav" activeClassName="main-nav-active">Dashboard</NavLink>
-                <NavLink exact to ='/courses'className= "main-nav" activeClassName="main-nav-active">Meus cursos</NavLink>
+                <NavLink to ='/courses'className= "main-nav" activeClassName="main-nav-active">Meus cursos</NavLink>
             </div>
         </div>
         )
