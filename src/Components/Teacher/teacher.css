@@ -1,0 +1,30 @@
+.Teacher .teacher-image{
+    width: 48px;
+    height: 48px;
+    left: 1029px;
+    top: 87px;
+    border-radius: 50%;
+}
+
+.Teacher #teacher-name{
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    width: 120px;
+    left: 1086px;
+    top: 87px;
+}
+
+.Teacher #teacher-title{
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    height: 19px;
+    width: 138px;
+    left: 1086px;
+    top: 114px;
+}

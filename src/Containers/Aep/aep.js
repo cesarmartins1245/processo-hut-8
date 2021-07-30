@@ -2,12 +2,16 @@ import './aep.css'
 import Rectangle from '../../Components/Rectangle/rectangle';
 import CardsList from '../../Components/CardsList/cardsList';
 import { FaGraduationCap, FaUserGraduate } from 'react-icons/fa';
+import Teacher from '../../Components/Teacher/teacher';
 import { GrUnorderedList } from 'react-icons/gr'
 import { getCourses } from '../../services/requests'
 import React, { useEffect, useState } from 'react'
+import { useLocation } from 'react-router-dom'
+
+
 
 const Aep = () => {
-    let loading = true
+    // let loading = true
     const [course, setCourses] = useState({})
     useEffect(() => {
         const getCourseData = async () => {
@@ -26,10 +30,9 @@ const Aep = () => {
     let courses = []
     let courseAep = []
     if(course.loaded){
-        const id = 'ac538bbd-97ba-456a-a003-2fa07a32ca6d'
-        courseAep = course.find(course => course.id === id)
-        console.log("id teste", courseAep)
-
+        const path = window.location.pathname
+        const id = path.split("/courses/")
+        courseAep = course.find(course => course.id === id[1])
         const cards = [
             {name: "Atividades Próximas", amount: `${courseAep.overview ? courseAep.overview.nextActivities : "0"}`, icon: <GrUnorderedList/>},
             {name: "Cursos matriculados", amount: `${courseAep.overview ? courseAep.overview.credits : "0"}`, icon: <FaGraduationCap/>},
@@ -45,14 +48,15 @@ const Aep = () => {
             />
         ))
 
-        courses = course.map((card) => (
+
+        courses= [
             {
-            image : card.image,
-            name : card.type,
-            title : card.course,
-            extra : card.class,
+            image : courseAep.nextActivities[0].image,
+            name : courseAep.type,
+            title : courseAep.course,
+            extra : courseAep.class,
             }
-        ))
+        ]
     }
     return(
         <div className="Dashboard">
