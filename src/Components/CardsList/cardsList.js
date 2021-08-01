@@ -6,8 +6,8 @@ function Card(props){
     const { image, name, title, extra, link} = props.card;
     console.log("teste cardslist",props)
     return(
-        <div>
-            <NavLink exact to={link||''} className="Card">
+        <div className="Card">
+            <NavLink exact to={link||''}>
                 <div>
                     <img src={image} alt="card image"></img>
                     <div className="card-content">

@@ -5,3 +5,10 @@
     line-height: 35px;
     color: #555555;
 }
+
+.Dashboard #teacher-img{
+    justify-content: space-between;
+    width: 48px;
+    height: 48px;
+    border-radius:50%;
+}

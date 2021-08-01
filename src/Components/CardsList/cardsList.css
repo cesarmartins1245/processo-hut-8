@@ -5,6 +5,10 @@
     text-decoration: none;
 }
 
+.Card a{
+    text-decoration: none;
+}
+
 .Card img {
     object-fit: cover;
     width: 236px;

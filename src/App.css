@@ -26,6 +26,34 @@ html {
     color: #737373;
 }
 
+.course-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.teacher-info{
+    display: flex;
+    align-items: center;
+}
+
+
+.course-info .teacher-info .teacher-text .teacher-name{
+    font-weight: 700;
+    font-size: 20px;
+    height: 27px;
+}
+
+.course-info .teacher-info .teacher-text{
+    padding-left: 9px;
+}
+
+.course-info .teacher-info .teacher-text .teacher-title{
+    font-weight: 400;
+    font-size: 14px;
+    height: 19px;
+    padding-bottom: 10px;
+}
+
 .cards-list {
     display: flex;
     flex-wrap: wrap;

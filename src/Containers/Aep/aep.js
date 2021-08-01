@@ -2,12 +2,9 @@ import './aep.css'
 import Rectangle from '../../Components/Rectangle/rectangle';
 import CardsList from '../../Components/CardsList/cardsList';
 import { FaGraduationCap, FaUserGraduate } from 'react-icons/fa';
-import Teacher from '../../Components/Teacher/teacher';
 import { GrUnorderedList } from 'react-icons/gr'
 import { getCourses } from '../../services/requests'
 import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
-
 
 
 const Aep = () => {
@@ -29,8 +26,10 @@ const Aep = () => {
     let cardsList = []
     let courses = []
     let courseAep = []
+    let professor= []
     if(course.loaded){
         const path = window.location.pathname
+        // console.log("teste path", window.location.pathname)
         const id = path.split("/courses/")
         courseAep = course.find(course => course.id === id[1])
         const cards = [
@@ -38,7 +37,6 @@ const Aep = () => {
             {name: "Cursos matriculados", amount: `${courseAep.overview ? courseAep.overview.credits : "0"}`, icon: <FaGraduationCap/>},
             {name: "Alunos online", amount: `${courseAep.overview ? courseAep.overview.enrolledStudents : "0"}`, icon: <FaUserGraduate/>},
         ]
-
         cardsList = cards.map((card, index) => (
             <Rectangle
                 string={card.name}
@@ -57,11 +55,27 @@ const Aep = () => {
             extra : courseAep.class,
             }
         ]
+        professor=[
+            {
+                name: courseAep.teacher.name
+            }
+        ]
     }
     return(
         <div className="Dashboard">
-            <div className="list-title">{courseAep.course}</div>
-            <div className="sub-title">Turma {courseAep.class}</div>
+            <div className="course-info">
+                <div>
+                    <div className="list-title">{courseAep.course}</div>
+                    <div className="sub-title">Turma {courseAep.class}</div>
+                </div>
+                <div className="teacher-info">
+                    <img id="teacher-img" src={courseAep.teacher?.avatar} alt="teacher image"></img>
+                    <div className="teacher-text">
+                        <div className="teacher-name">{courseAep.teacher?.name}</div>
+                        <div className="teacher-title">Professor responsável</div>
+                    </div>
+                </div>
+            </div>
             <div className="cards-list">{cardsList}</div>
             <div style={{marginTop: "34px"}}>
             <CardsList title="Próximas atividades" cards={courses}></CardsList>
